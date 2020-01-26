@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Weather Analysis: Comparisons</title>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <ul class="nav justify-content-center nav-tabs border border-light shadow-sm">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="temp.html">Temperature</a>
+                    <a class="dropdown-item" href="humid.html">Humidity</a>
+                    <a class="dropdown-item" href="wind.html">Wind Speed</a>
+                    <a class="dropdown-item" href="cloud.html">Cloudiness</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="compare.html">Comparisons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                  </li>
+            <!--<li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>-->
+              </ul>
+        </nav>
+    </div>
+
+    <div>
+        <header>
+        </header>
+    </div>
+
+    <div class="container fluid"> <!-- ONE ROW, TWO COLUMNS -->
+     
+      <div class="row p-3 align-items-start"> <!-- HERE'S THE ROW, ADD PADDING HERE IDEALLY -->
+        <div class="col-lg-8 border border-light shadow 
+        p-3 m-3"> <!-- FIRST COLUMN WIDTH SETTING -->
+          <h3 class='display-4 text-primary' >Comparisons<hr></h3>
+          <p class="card-text">
+            <div class='row'>
+              <div class='col-sm'>
+                <figure class=>
+                  <img src="./Images/Latitude_vs_Temp.png" class="img-fluid rounded m-2" alt="Lat X Temp">
+                  <figcaption class="figure-caption text-center text-primary"><i>Fig 1: Lat X Temp</i></figcaption>
+                </figure>
+              </div>  
+              <div class='col-sm'>
+                <figure class='img-fluid'>
+                  <img src="./Images/Latitude_vs_Humidity.png" class="img-fluid rounded m-2" alt="Lat X Humidity">
+                  <figcaption class="figure-caption text-center text-primary"><i>Fig 2: Lat X Humidity</i></figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-sm'>
+                <figure>
+                  <img src="./Images/Latitude_vs_Wind_Speed.png" class=" img-fluid rounded m-2" alt="Lat X Wind Speed">
+                  <figcaption class="figure-caption text-center text-primary"><i>Fig 3: Lat X Wind Speed</i></figcaption>
+                </figure>
+              </div>
+              <div class='col-sm'>
+                <figure>
+                  <img src="./Images/Latitude_vs_Cloudiness.png" class=" img-fluid rounded m-2" alt="Lat X Cloudiness">
+                  <figcaption class="figure-caption text-center text-primary"><i>Fig 4: Lat X Cloudiness</i></figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg'>
+                <p class='lead'>
+                  The purpose of this project was to analyse how weather changes 
+                  as you get close to the equator. 
+                  To accomplish this analysis we first pulled data 
+                  from the OpenWeatherMap API to assemble a dataset 
+                  on over 500 cities.</p>
+                  <p class='lead'>After assembling the dataset, we used Matplotlib 
+                  to plot various aspects of the weather vs latitude.
+                  Factors we included were temperature, cloudiness, windspeed,
+                  and humidity, as you can see in the visualizations above.</p>
+                  <p class='lead'>To see a sample of the data set pulled from OpenWeatherMap
+                    check out the data page.</p>
+                  <a href="data.html" class="btn btn-primary btn-block active" role="button" aria-pressed="true">Data</a>
+                </p>
+              </div>
+            </div> 
+          </p>
+        </div>
+        <div class="col-sm border border-light shadow p-3 m-3"> <!-- SECOND COLUMN WIDTH SETTING -->
+          <h4 class='lead text-muted'><b>All Visualizations</b></h4>
+          <p>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active"> <!-- you can turn it off here!! -->
+                    <img src="./Images/Latitude_vs_Temp.png" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Images/Latitude_vs_Humidity.png" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Images/Latitude_vs_Cloudiness.png" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./Images/Latitude_vs_Wind_Speed.png" class="d-block w-50" alt="...">
+                </div>
+              </div>
+            </div>
+          </p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href='temp.html'>Temperature</a></li>
+            <li class="list-group-item"><a href='humid.html'>Humidity</a></li>
+            <li class="list-group-item"><a href='wind.html'>Wind Speed</a></li>
+            <li class="list-group-item"><a href='cloud.html'>Cloudiness</a></li>
+          </ul>
+        </div>
+    </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
